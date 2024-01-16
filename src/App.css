@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 95vh;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.chat-container div {
+    border: 1px solid blue;
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+}
+
+.chat-log {
+    flex: 1;
+}
+
+.chat-message-input input {
+    font-size: 14px;
+    width: 100%;
+}
