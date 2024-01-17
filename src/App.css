@@ -88,7 +88,9 @@ body {
 
 .chat-log {
     flex: 1;
-    overflow-y: auto;
+    display: flex;
+    overflow: auto;
+    flex-direction: column-reverse;
 }
 
 .chat-from-me {
