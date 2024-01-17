@@ -18,6 +18,7 @@ function LoginPage(props) {
                     placeholder="Username"
                     value={username}
                     onChange={onChange}
+                    data-lpignore="true"
                 />
                 <button
                     type="button"
