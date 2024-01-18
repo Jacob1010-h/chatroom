@@ -9,7 +9,7 @@ function Chat(props) {
     return (
         <div className="chat-container">
             <Username username={props.username} />
-            <ChatLog chatLog={props.chatLog} username={props.username} />
+            <ChatLog chatLog={props.chatLog} username={props.username} links={props.links}/>
             <MessageInput
                 messageInput={props.messageInput}
                 onChange={props.onChange}

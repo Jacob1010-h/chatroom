@@ -8,7 +8,7 @@ function PageSelect(props) {
     const [messageInput, setMessageInput] = useState("");
     const [chatLog, setChatLog] = useState([]);
     const [pageState, setPageState] = useState("Select");
-    const [lastPageState, setLastPageState] = useState(null); // Add a new state variable for the last page state
+    const [lastPageState, setLastPageState] = useState(null);
 
     const onChange = (evt) => setMessageInput(evt.target.value);
     const onSubmit = (evt) => {
@@ -45,38 +45,97 @@ function PageSelect(props) {
     };
     useEffect(fetchData, [pageState]);
 
-
     const handleButtonClick = (state) => {
-        setLastPageState(pageState ? pageState : "Chat"); // If pageState is null, set lastPageState to "Chat"
+        setLastPageState(pageState ? pageState : "Chat");
         setPageState(state);
     };
 
-    const selectorButton = (state) => {
+    const renderSelectPage = () => {
         return (
-            <div className="chat-page-select">
+            <div className=" mb-20 text-md shadow-md p-20 w-full h-screen justify-center flex flex-col items-center ">
                 <h2>Welcome to the {pageState} App</h2>
-                <button onClick={() => handleButtonClick(state)}>Go to {lastPageState ? lastPageState : "Chat"}</button>
+                {selectorButton("Chat")}
+                {selectorButton("Links")}
             </div>
         );
     };
 
-    return (
-        <div>
-            {pageState === "Select" ? (
-                selectorButton("Chat")
-            ) : (
-                <div>
+    const renderChat = () => {
+        return (
+            <div>
+                <div className="mb-20 text-md bg-[#162d3f] shadow-lg p-3 w-full flex flex-col items-start">
                     {selectorButton("Select")}
+                </div>
+                <div>
                     <Chat
                         messageInput={messageInput}
                         onChange={onChange}
                         onSubmit={onSubmit}
                         chatLog={chatLog}
                         username={props.username}
+                        links={false}
                     />
                 </div>
+            </div>
+        );
+    };
+
+    const selectorButton = (state) => {
+        return (
+            <button
+                className="page-select-button"
+                onClick={() => handleButtonClick(state)}
+            >
+                Go to {state}
+            </button>
+        );
+    };
+
+    const renderLinks = () => {
+        return (
+            <div>
+                <div className="mb-20 text-md bg-[#162d3f] shadow-lg p-3 w-full flex flex-col items-start">
+                    {selectorButton("Select")}
+                </div>
+                <div>
+                    <Chat
+                        messageInput={messageInput}
+                        onChange={onChange}
+                        onSubmit={onSubmit}
+                        chatLog={chatLog}
+                        username={props.username}
+                        links={true}
+                    />
+                </div>
+            </div>
+        );
+    };
+
+    const render404 = () => {
+        return (
+            <div>
+                <div className="mb-20 text-md bg-[#162d3f] shadow-lg p-3 w-full flex flex-col items-start">
+                    {selectorButton("Select")}
+                </div>
+                <div className="text-md shadow-md p-20 w-full h-screen justify-center flex flex-col items-center ">
+                    <h2>404: Page Not Found</h2>
+                </div>
+            </div>
+        );
+    };
+
+    return (
+        <span>
+            {pageState === "Select" ? (
+                <div className=" overflow-hidden h-screen">{renderSelectPage()}</div>
+            ) : pageState === "Chat" ? (
+                <div className=" overflow-auto ">{renderChat()}</div>
+            ) : pageState === "Links" ? (
+                <div>{renderLinks()}</div>
+            ) : (
+                <div>{render404}</div>
             )}
-        </div>
+        </span>
     );
 }
 

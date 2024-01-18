@@ -1,21 +1,4 @@
-.chat-page-select {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%; /* Adjust as needed */
-    margin: 0 auto; /* Centers the component horizontally */
-    padding: 20px;
-    color: var(--text-color);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a slight shadow for depth */
-}
-
-.chat-page-select h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.chat-page-select button {
+.page-select-button {
     padding: 10px 20px;
     font-size: 1.2em;
     color: var(--text-color);
@@ -24,8 +7,9 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 10px; /* Add a margin to the buttons */
 }
 
-.chat-page-select button:hover {
+.page-select-button:hover {
     background-color: var(--button-color-hover);
 }
