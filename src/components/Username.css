@@ -1,0 +1,9 @@
+.chat-username {
+    border-radius: var(--border-radius);
+    margin: var(--margin);
+    padding: var(--padding);
+    background-color: var(--transparent-bg);
+    backdrop-filter: var(--deep-blur-effect); /* Use the increased blur effect */
+    -webkit-backdrop-filter: var(--deep-blur-effect); /* For Safari */
+    border: var(--border-style);
+}

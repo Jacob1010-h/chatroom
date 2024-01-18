@@ -1,0 +1,22 @@
+.chat-message-input {
+    background-color: var(--transparent-bg);
+    color: var(--text-color);
+    backdrop-filter: var(--deep-blur-effect);
+    -webkit-backdrop-filter: var(--deep-blur-effect); /* For Safari */
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+.chat-message-input input {
+    font-size: 14px;
+    width: 100%;
+    border: var(--border-style);
+    padding: var(--padding);
+    border-radius: 5px;
+    color: var(--text-color);
+    background-color: var(--transparent-bg);
+    backdrop-filter: var(--deep-blur-effect);
+    -webkit-backdrop-filter: var(--blur-effect); /* For Safari */
+}

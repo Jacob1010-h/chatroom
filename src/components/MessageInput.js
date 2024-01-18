@@ -1,4 +1,5 @@
 import React from "react";
+import "./MessageInput.css";
 
 function MessageInput(props) {
     return (

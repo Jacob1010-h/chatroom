@@ -1,0 +1,38 @@
+.chat-login-page-container {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    height: 95vh;
+    border-radius: var(--border-radius);
+    margin: var(--margin) auto;
+}
+
+.chat-login-page-controls-container {
+    margin: var(--margin) 100px;
+    font-size: 18px;
+}
+
+.chat-login-page-controls-container h4,
+.chat-login-page-controls-container input,
+.chat-login-page-controls-container button {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+
+.chat-login-page-controls-container button {
+    background-color: var(--transparent-bg);
+    color: var(--text-color);
+    border: var(--border-style);
+    padding: var(--padding) 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    backdrop-filter: var(--blur-effect);
+    -webkit-backdrop-filter: var(--blur-effect); /* For Safari */
+}
+
+.chat-login-page-controls-container button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,18 @@
+.chat-log {
+    flex: 1;
+    display: flex;
+    overflow: auto;
+    flex-direction: column-reverse;
+}
+
+.chat-item {
+    margin: var(--margin) 0 !important;
+}
+
+.chat-from-me {
+    text-align: right;
+    background-color: var(--transparent-bg) !important;
+    backdrop-filter: var(--blur-effect);
+    -webkit-backdrop-filter: var(--blur-effect); /* For Safari */
+    border: var(--border-style);
+}

@@ -3,6 +3,8 @@ import Username from "./Username";
 import ChatLog from "./ChatLog";
 import MessageInput from "./MessageInput";
 
+import "./Chat.css";
+
 function Chat(props) {
     return (
         <div className="chat-container">
