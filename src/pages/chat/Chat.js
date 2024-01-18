@@ -1,7 +1,7 @@
 import React from "react";
-import Username from "./Username";
-import ChatLog from "./ChatLog";
-import MessageInput from "./MessageInput";
+import Username from "../../components/inputs/username/Username";
+import ChatLog from "../../components/log/ChatLog";
+import MessageInput from "../../components/inputs/message/MessageInput";
 
 import "./Chat.css";
 

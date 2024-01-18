@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import Chat from "./components/Chat";
+import Chat from "./pages/chat/Chat";
 import { db } from "./firebaseConfig";
 import { push, onValue, ref, off, onChildRemoved } from "firebase/database";
-import LoginPage from "./components/LoginPage";
+import LoginPage from "./pages/login/LoginPage";
 
 function App() {
     const [username, setUsername] = useState("John");
